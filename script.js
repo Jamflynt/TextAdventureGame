@@ -35,3 +35,50 @@ OR
 ${enter}`;
 const gameOver5 = `You looked at the trap and the light BLINDED YOU! ${gameOver}`;
 const win = `The ghost trap sucked Slimer in and closed. CONGRATULATIONS! YOU CAUGHT SLIMER!!!`;
+
+// Alerts the user to start the game
+alert(start);
+
+// Setst the value of userInput to the user's entry 
+let userInput = prompt(q1);
+
+// 1st Conditional Statement
+// Note: Prompt returns the value entered as a string. That is why double equals == is used instead of tripe equals === here. 
+if (userInput == 1) {
+    userInput = prompt(q2);
+
+    // 2nd Conditional Statement
+    if (userInput == 1) {
+        userInput = prompt(q3);
+
+        // 3rd Conditional Statement
+        if(userInput == 2) {
+            userInput = prompt(q4);
+        
+            // 4th Conditional Statement
+            if(userInput == 1) {
+                userInput = prompt(q5);
+            
+                // 5th Condtional Statement
+                if(userInput == 2) {
+                    alert(win)
+                } else {
+                    alert(gameOver5)
+                }
+            
+            } else {
+                alert(gameOver4)
+            }
+        
+        } else {
+            alert(gameOver3)
+        }
+
+    } else {
+        alert(gameOver2);
+    }
+
+} else {
+    alert(gameOver1);
+}
+
